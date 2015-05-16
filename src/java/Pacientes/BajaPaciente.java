@@ -25,23 +25,19 @@ public class BajaPaciente extends HttpServlet {
         int numSeguro = Integer.parseInt(request.getParameter("numSeguro"));
 
         String sql = "DELETE FROM Paciente WHERE numero_seguro=" + numSeguro;
-        String sq2 = "DELETE FROM Paciente WHERE numero_de_seguro=" + numSeguro;
         
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            try (Connection con = DriverManager.getConnection("jdbc:sqlserver://wtr6kjv2ao.database.windows.net:1433;databaseName=BDA", "BasesAvanzadas", "Elproyecto1");
-                PreparedStatement ps = con.prepareStatement(sql)) {
+            try (Connection con = DriverManager.getConnection("jdbc:sqlserver://wtr6kjv2ao.database.windows.net:1433;databaseName=BDA", "BasesAvanzadas", "Elproyecto1")
+            
+            ;PreparedStatement ps = con.prepareStatement(sql)) {
                 ps.executeUpdate();
-                }
-                
-                ;PreparedStatement ps2 = con.prepareStatement(sq2)) {
-                ps2.executeUpdate();
-                }
             }
         } catch (ClassNotFoundException | SQLException ex) {
             // while(true){ Dance(); }
             ex.printStackTrace();
         }
+        
         response.sendRedirect("Administracion.jsp");
 
     }
