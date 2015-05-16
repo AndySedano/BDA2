@@ -70,7 +70,7 @@
                 </p>
 
                 <div class="form-group">  
-                    <form method="GET" action="${pageContext.request.contextPath}/BajaPaciente">
+                    <form method="POST" action="${pageContext.request.contextPath}/BajaPaciente">
                         <div class="form-group">
                             <label>
                                 N&uacute;mero de seguro:
@@ -78,52 +78,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="numSeguro">
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                Buscar
-                            </button>
                         </div>
-                    </form>
-
-                    <form method="POST" action="${pageContext.request.contextPath}/BajaPaciente">
-                        <!-- Los resultados de la BD-->
-                        <table>
-                            <tr>
-                                <th>Seleccionar</th>
-                                <th>Nombre</th>
-                                <th>Apellido Paterno</th>
-                                <th>Apellido Materno</th>
-                                <th>Sexo</th>
-                                <th>Fecha de Nacimiento</th>
-                            </tr>
-
-<!-- Esto no se que tan mal esta :( -->
-                            <c:forEach items="${uli}" var="uli">
-                                <tr>
-                                    <td><input type="checkbox" name="ok" value="yes"></td>
-                                    <td>
-                                        <!-- Nombre de Pila -->
-                                        ${uli}
-                                    </td>
-                                    <td>
-                                        <!-- Apellido Paterno -->
-                                        ${uli}
-                                    </td>
-                                    <td>
-                                        <!-- Apellido Materno -->
-                                        ${uli}
-                                    </td>
-                                    <td>
-                                        <!-- Snu Snu -->
-                                        ${uli}
-                                    </td>
-                                    <td>
-                                        <!-- Fecha de Nacimiento -->
-                                        ${uli}
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                        </table>
-
 
                         <button type="submit" class="btn btn-primary">
                             Eliminar del Sistema
