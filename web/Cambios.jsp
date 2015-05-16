@@ -72,7 +72,7 @@
 
                 <div class="form-group">   
 
-                    <form method="GET" action="${pageContext.request.contextPath}/BajaMedico">
+                    <form method="GET" action="${pageContext.request.contextPath}/CambiosMedicos">
                         <div class="form-group">
                             <label>
                                 N&uacute;mero de C&eacute;dula:
@@ -98,44 +98,46 @@
 
                                 <label>Nombre de Pila</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nombrePila">
+                                    <input type="text" class="form-control" name="nombrePila" value="${nombre}">
                                 </div>
                                 <label>Apellido Paterno</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="apellidoPaterno">
+                                    <input type="text" class="form-control" name="apellidoPaterno" value="${apellido_paterno}">
                                 </div>
                                 <label>Apellido Materno</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="apellidoMaterno">
+                                    <input type="text" class="form-control" name="apellidoMaterno" value="${apellido_materno}">
                                 </div>
                                 <label>Tel&eacute;fono</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="telefonoso">
+                                    <input type="text" class="form-control" name="telefonoso" value="${telefono}">
                                 </div>
                                 <label>Fecha de Nacimiento</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="fechaNacimiento">
+                                    <input type="text" class="form-control" name="fechaNacimiento" value="${fecha_nacimiento}">
                                 </div>
                                 <label>Direcci&oacute;n</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="direccion">
+                                    <input type="text" class="form-control" name="direccion" value="${direccion}">
                                 </div>
                                 <label>Perfil</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="perfil">
+                                    <input type="text" class="form-control" name="perfil" value="${perfil}">
                                 </div>
                                 <label>Especialidad</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="especialidad">
+                                    <input type="text" class="form-control" name="especialidad" value="${especialidad}">
                                 </div>
+                                    <input type="hidden" name="cedula" value="${cedula}">
+                                <button type="submit" class="btn btn-primary">
+                                   Modificar M&eacute;dico
+                                 </button>
 
                             </form>
 
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
-                            Modificar M&eacute;dico
-                        </button>
+                        
                     </div>
                 </div>
             </div>

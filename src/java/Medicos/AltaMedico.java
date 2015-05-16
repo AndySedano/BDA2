@@ -41,7 +41,7 @@ public class AltaMedico extends HttpServlet {
             try (Connection con = DriverManager.getConnection("jdbc:sqlserver://wtr6kjv2ao.database.windows.net:1433;databaseName=BDA", "BasesAvanzadas", "Elproyecto1")
             
             ;PreparedStatement ps = con.prepareStatement(sql)) {
-                ps.setInt(1, (int) (Math.random() * 10));
+                ps.setInt(1, (int) (Math.random() * 100));
                 ps.setString(2, nombrePila);
                 ps.setString(3, apellidoPaterno);
                 ps.setString(4, apellidoMaterno);
